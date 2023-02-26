@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Judul Dokumen</title>
+    <style>
+      /* Type Selector */
+      span {
+        color: red;
+      }
+
+      /* class selector */
+      .red {
+        color: red;
+      }
+
+      .skyblue-bg {
+        background-color: skyblue;
+      }
+
+      .fancy {
+        font-weight: bold;
+        text-shadow: 4px 4px 3px #77f;
+      }
+
+      p.fancy {
+        text-shadow: 4px 4px 3px #00c8eb;
+      }
+
+      /* ID Selector -  nilai id ini harus unik dan digunakan pada satu elemen saja.*/
+      #special {
+        background-color: skyblue;
+      }
+
+      /* Attribute Selector */
+      /* <a> element yang menerapkan href attribut */
+      a[href] {
+        color: blue;
+      }
+
+      /* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+      a[href^="#"] {
+        background-color: gold;
+      }
+
+      /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+      a[href*="example"] {
+        background-color: silver;
+      }
+
+      /* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+      a[href*="insensitive" i] {
+        color: cyan;
+      }
+
+      /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+      a[href$=".org"] {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Type Selector</h1>
+    <span>Ini merupakan sebuah teks yang berada pada elemen span. Seharusnya elemen ini ditampilkan dengan warna teks merah.</span>
+    <p>Ini merupakan sebuah teks yang berada pada elemen paragraf, teks ini tidak seharusnya tidak akan terpengaruh oleh rule.</p>
+    <span>Ini merupakan sebuah teks yang berada pada elemen span lainnya. Seharusnya elemen ini ditampilkan dengan warna teks merah juga.</span>
+
+    <h1>Class Selector</h1>
+    <h3 class="fancy">Heading dengan teks bergaya fancy</h3>
+    <p class="red">Paragraf dengan teks berwarna merah</p>
+    <p class="red skyblue-bg">Paragraf dengan teks berwarna merah dan background berwarna biru langit</p>
+    <p class="fancy">Paragraf dengan gaya fancy</p>
+    <p>Paragraf yang menampilkan teks dengan warna standar tanpa menerapkan styling</p>
+
+    <!-- nilai id ini harus unik dan digunakan pada satu elemen saja. Jika kita ingin menerapkan sebuah rule pada banyak elemen, sebaiknya gunakan atribut class, bukan dengan id.-->
+    <h1>ID Selector</h1>
+    <div id="special">
+      <p>Ini merupakan konten di dalam sebuah div yang diberi id special.</p>
+    </div>
+    <div id="special">
+      <!-- ini merupakan contoh yang salah dalam penerapan id -->
+      <p>Ini merupakan konten di dalam sebuah div biasa.</p>
+    </div>
+
+    <h1>Attribute Selector</h1>
+    <ul>
+      <ul>
+        <li><a href="#internal">Internal link</a></li>
+        <li><a href="http://example.com">Example link</a></li>
+        <li><a href="#InSensitive">Insensitive internal link</a></li>
+        <li><a href="http://example.org">Example org link</a></li>
+      </ul>
+    </ul>
+  </body>
+</html>
