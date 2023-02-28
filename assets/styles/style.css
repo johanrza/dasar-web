@@ -21,6 +21,14 @@ body {
   width: 75%;
 }
 
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -31,6 +39,10 @@ body {
 h2,
 h3 {
   color: #00a2c6;
+}
+
+header {
+  display: inline;
 }
 
 .jumbotron {
@@ -46,6 +58,13 @@ main {
   overflow: auto;
 }
 
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+  position: sticky;
+  top: 0px;
+}
+
 nav a {
   font-size: 18px;
   font-weight: 400;
@@ -54,6 +73,11 @@ nav a {
 
 nav a:hover {
   font-weight: bold;
+}
+
+nav a:visited {
+  font-weight: bold;
+  color: white;
 }
 
 nav li {
